@@ -104,11 +104,7 @@ class App {
         }
       ]),
       s = t.fragmentShader;
-    /*
-    s = s.replace(
-      "vec4 diffuseColor = vec4( diffuse, opacity );",
-      document.getElementById("fragmentShader").textContent
-    );*/
+
     let a = new THREE.ShaderMaterial({
       uniforms: i,
       vertexShader: document.getElementById("vertexShader").textContent,
