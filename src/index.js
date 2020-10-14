@@ -45,7 +45,7 @@ class App {
       document.addEventListener("touchend", this.onMouseUp.bind(this), !1),
       document.addEventListener(
         "touchmove",
-        e => {
+        (e) => {
           this.onMove(e.touches[0]);
         },
         !1
@@ -104,10 +104,11 @@ class App {
         }
       ]),
       s = t.fragmentShader;
+    /*
     s = s.replace(
       "vec4 diffuseColor = vec4( diffuse, opacity );",
       document.getElementById("fragmentShader").textContent
-    );
+    );*/
     let a = new THREE.ShaderMaterial({
       uniforms: i,
       vertexShader: document.getElementById("vertexShader").textContent,
@@ -325,7 +326,7 @@ class App {
       this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 }
-Number.prototype.map = function(e, t, i, s) {
+Number.prototype.map = function (e, t, i, s) {
   return ((this - e) * (s - i)) / (t - e) + i;
 };
 
